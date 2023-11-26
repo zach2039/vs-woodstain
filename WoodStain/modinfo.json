@@ -1,0 +1,13 @@
+{
+    "type": "code",
+    "modid": "woodstain",
+    "name": "Wood Stain",
+    "authors": [
+        "Zach2039"
+    ],
+    "description": "A Vintage Story mod that adds wood stain and similar materials, for creating colorful blocks.",
+    "version": "1.0.0",
+    "dependencies": {
+        "game": "1.18.15"
+    }
+}
