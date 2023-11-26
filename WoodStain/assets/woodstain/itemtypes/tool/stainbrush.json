@@ -61,7 +61,8 @@
 		}
 	],
 	"variantgroups": [
-		{ "code":"color", "states": [ "plain", "blue", "red", "yellow", "green", "purple", "pink", "orange", "brown", "gray", "black", "white" ] }
+		{ "code":"color", "states": [ "none", "blue", "red", "yellow", "green", "purple", "pink", "orange", "brown", "gray", "black", "white" ] },
+		{ "code":"state", "states": [ "wet", "dry" ] }
 	],
 	"damagedby":[
 		"blockbreaking",
@@ -72,7 +73,7 @@
 		"base":"item/tool/stainbrush"
 	},
 	"texturesByType":{
-        "*-plain": {
+        "*-none-*": {
             "brush": { 
                 "base": "game:block/cloth/linen/normal1" 
             },
@@ -167,5 +168,23 @@
 			"z":0
 		},
 		"scale":0.7
+	},
+	"transitionablePropsByType":{
+		"*-wet": [
+			{
+				"type":"Dry",
+				"freshHours":{
+					"avg":2
+				},
+				"transitionHours":{
+					"avg":72
+				},
+				"transitionedStack":{
+					"type":"item",
+					"code":"stainbrush-{color}-dry"
+				},
+				"transitionRatio":1
+			}
+		]
 	}
 }

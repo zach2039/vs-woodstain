@@ -44,21 +44,34 @@ namespace WoodStain
 			}
 
 			Block block = this.api.World.BlockAccessor.GetBlock(blockSel.Position);
-			string color = this.Variant["color"];
-            AssetLocation newBlockCode = block.Code.WildCardReplace(new AssetLocation("*-planks-*"), new AssetLocation("*-stainedplanks-" + color + "-*"));
-
-			if (newBlockCode.Valid)
+			if (block == null)
 			{
-				this.api.World.PlaySoundAt(block.Sounds.Place, (double)((float)blockSel.Position.X + 0.5f), (double)((float)blockSel.Position.Y + 0.5f), (double)((float)blockSel.Position.Z + 0.5f), byPlayer, true, 32f, 1f);
-				IClientWorldAccessor clientWorldAccessor = this.api.World as IClientWorldAccessor;
-				if (clientWorldAccessor != null)
+				return false;
+			}
+
+			string color = this.Variant["color"];
+			if (color == null)
+			{
+				return false;
+			}
+
+            AssetLocation newBlockCode = new AssetLocation("woodstain", block.Code.Path.Replace("planks", "stainedplanks-" + color));
+			if (newBlockCode != null)
+			{
+				Block newBlock = this.api.World.GetBlock(newBlockCode);
+				if (newBlock != null)
 				{
-					clientWorldAccessor.Player.TriggerFpAnimation(EnumHandInteract.HeldItemInteract);
+					this.api.World.PlaySoundAt(block.Sounds.Place, (double)((float)blockSel.Position.X + 0.5f), (double)((float)blockSel.Position.Y + 0.5f), (double)((float)blockSel.Position.Z + 0.5f), byPlayer, true, 32f, 1f);
+					IClientWorldAccessor clientWorldAccessor = this.api.World as IClientWorldAccessor;
+					if (clientWorldAccessor != null)
+					{
+						clientWorldAccessor.Player.TriggerFpAnimation(EnumHandInteract.HeldItemInteract);
+					}
+
+					this.api.World.BlockAccessor.ExchangeBlock(newBlock.Id, blockSel.Position);
+					this.api.World.BlockAccessor.MarkBlockDirty(blockSel.Position, byPlayer);
+					return true;
 				}
-				Block newBlock = this.api.World.BlockAccessor.GetBlock(newBlockCode);
-				this.api.World.BlockAccessor.ExchangeBlock(newBlock.Id, blockSel.Position);
-				this.api.World.BlockAccessor.MarkBlockDirty(blockSel.Position, byPlayer);
-				return true;
 			}
 			
 			return false;

@@ -7,11 +7,28 @@
 		{
 			"name":"WrenchOrientable",
 			"properties":{
-				"baseCode":"stainedplanks-{wood}-{stain}"
+				"baseCode":"stainedplanks-{stain}-{wood}"
 			}
 		}
 	],
 	"variantgroups":[
+		{
+			"code":"stain",
+			"states":[
+				"blue", 
+                "red", 
+                "yellow",
+                "purple",
+				"pink",
+                "woad",
+                "green",
+                "orange",
+				"brown",
+                "gray",
+				"black",
+                "white"
+			]
+		},
 		{
 			"code":"wood",
 			"states":[
@@ -20,22 +37,6 @@
 				"rottenebony"
 			],
 			"loadFromProperties":"game:block/wood"
-		},
-        {
-			"code":"stain",
-			"states":[
-				"blue", 
-                "red", 
-                "yellow",
-                "purple",
-                "woad",
-                "green",
-                "orange",
-                "black",
-                "gray",
-                "pink",
-                "white"
-			]
 		},
 		{
 			"code":"orientation",
@@ -60,7 +61,7 @@
 	"blockmaterial":"Wood",
 	"drawtype":"cube",
 	"texturesByType":{
-		"*-aged-*-ud":{
+		"*-aged-ud":{
 			"all":{
 				"base":"game:block/wood/planks/aged/generic1", "blendedOverlays": [{ "base": "block/wood/stain/overlay-{stain}", "blendMode": "Overlay" }], "rotation":90,
                 "alternates": [
@@ -76,7 +77,7 @@
                 ]
 			}
 		},
-		"*-aged-*-we":{
+		"*-aged-we":{
 			"all":{
 				"base":"game:block/wood/planks/aged/generic1", "blendedOverlays": [{ "base": "block/wood/stain/overlay-{stain}", "blendMode": "Overlay" }], "rotation":0,
                 "alternates": [
@@ -92,7 +93,7 @@
                 ]
 			}
 		},
-		"*-aged-*-ns":{
+		"*-aged-ns":{
 			"all":{
 				"base":"game:block/wood/planks/aged/generic1", "blendedOverlays": [{ "base": "block/wood/stain/overlay-{stain}", "blendMode": "Overlay" }], "rotation":0,
                 "alternates": [
@@ -122,7 +123,7 @@
                 ]
 			}
 		},
-		"*-agedebony-*-ud":{
+		"*-agedebony-ud":{
 			"all":{
 				"base":"game:block/wood/planks/aged/ebony1", "blendedOverlays": [{ "base": "block/wood/stain/overlay-{stain}", "blendMode": "Overlay" }], "rotation":90,
                 "alternates": [
@@ -136,7 +137,7 @@
                 ]
 			}
 		},
-		"*-agedebony-*-we":{
+		"*-agedebony-we":{
 			"all":{
 				"base":"game:block/wood/planks/aged/ebony1", "blendedOverlays": [{ "base": "block/wood/stain/overlay-{stain}", "blendMode": "Overlay" }], "rotation":0,
                 "alternates": [
@@ -150,7 +151,7 @@
                 ]
 			}
 		},
-		"*-agedebony-*-ns":{
+		"*-agedebony-ns":{
 			"all":{
 				"base":"game:block/wood/planks/aged/ebony1", "blendedOverlays": [{ "base": "block/wood/stain/overlay-{stain}", "blendMode": "Overlay" }], "rotation":0,
                 "alternates": [
@@ -176,7 +177,7 @@
                 ]
 			}
 		},
-		"*-rottenebony-*-ud":{
+		"*-rottenebony-ud":{
 			"all":{
 				"base":"game:block/wood/planks/rottenebony1", "blendedOverlays": [{ "base": "block/wood/stain/overlay-{stain}", "blendMode": "Overlay" }], "rotation":90,
                 "alternates": [
@@ -184,7 +185,7 @@
                 ]
 			}
 		},
-		"*-rottenebony-*-we":{
+		"*-rottenebony-we":{
 			"all":{
 				"base":"game:block/wood/planks/rottenebony1", "blendedOverlays": [{ "base": "block/wood/stain/overlay-{stain}", "blendMode": "Overlay" }], "rotation":0,
                 "alternates": [
@@ -192,7 +193,7 @@
                 ]
 			}
 		},
-		"*-rottenebony-*-ns":{
+		"*-rottenebony-ns":{
 			"all":{
 				"base":"game:block/wood/planks/rottenebony1", "blendedOverlays": [{ "base": "block/wood/stain/overlay-{stain}", "blendMode": "Overlay" }], "rotation":0,
                 "alternates": [
@@ -276,7 +277,7 @@
 	"drops":[
 		{
 			"type":"block",
-			"code":"stainedplanks-{wood}-{stain}-ns"
+			"code":"stainedplanks-{stain}-{wood}-ns"
 		}
 	]
 }
