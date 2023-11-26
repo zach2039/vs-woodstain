@@ -174,10 +174,10 @@
 			{
 				"type":"Dry",
 				"freshHours":{
-					"avg":2
+					"avg":12
 				},
 				"transitionHours":{
-					"avg":72
+					"avg":12
 				},
 				"transitionedStack":{
 					"type":"item",
