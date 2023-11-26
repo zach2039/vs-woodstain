@@ -60,37 +60,56 @@
 			}
 		}
 	],
-	"variantgroups": [
-		{ "code":"color", "states": [ "none", "blue", "red", "yellow", "green", "purple", "pink", "orange", "brown", "gray", "black", "white" ] },
-		{ "code":"state", "states": [ "wet", "dry" ] }
-	],
-	"damagedby":[
-		"blockbreaking",
-		"attacking"
+	"variantgroups":[
+		{
+			"code":"color",
+			"states":[
+				"none",
+				"blue", 
+                "red", 
+                "yellow",
+                "purple",
+				"pink",
+                "woad",
+                "green",
+                "orange",
+				"brown",
+                "gray",
+				"black",
+                "white"
+			]
+		},
+		{
+			"code":"state",
+			"states":[
+				"wet",
+				"dry"
+			]
+		}
 	],
 	"heldTpHitAnimation":"smithing",
 	"shape":{
 		"base":"item/tool/stainbrush"
 	},
 	"texturesByType":{
-        "*-none-*": {
-            "brush": { 
-                "base": "game:block/cloth/linen/normal1" 
-            },
-            "handle":{
-                "base":"game:item/tool/material/wood"
-            }
-        },
+		"*-none-*":{
+			"brush":{
+				"base":"game:block/cloth/linen/normal1"
+			},
+			"handle":{
+				"base":"game:item/tool/material/wood"
+			}
+		},
 		"*":{
-            "brush": { 
-                "base": "game:block/cloth/linen/{color}" 
-            },
-            "handle":{
-                "base":"game:item/tool/material/wood"
-            }
+			"brush":{
+				"base":"game:block/cloth/linen/{color}"
+			},
+			"handle":{
+				"base":"game:item/tool/material/wood"
+			}
 		}
 	},
-	"durability": 120,
+	"durability":128,
 	"creativeinventory":{
 		"general":[
 			"*"
@@ -170,18 +189,18 @@
 		"scale":0.7
 	},
 	"transitionablePropsByType":{
-		"*-wet": [
+		"*-wet":[
 			{
 				"type":"Dry",
 				"freshHours":{
-					"avg":12
+					"avg":24
 				},
 				"transitionHours":{
 					"avg":12
 				},
 				"transitionedStack":{
 					"type":"item",
-					"code":"stainbrush-{color}-dry"
+					"code":"stainbrush-none-dry"
 				},
 				"transitionRatio":1
 			}

@@ -2,6 +2,7 @@
 using Vintagestory.API.Common;
 using Vintagestory.API.Config;
 using Vintagestory.API.Server;
+using WoodStain.Items;
 using WoodStain.Network;
 
 namespace WoodStain

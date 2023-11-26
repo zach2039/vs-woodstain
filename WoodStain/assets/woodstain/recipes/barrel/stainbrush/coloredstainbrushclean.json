@@ -1,0 +1,22 @@
+[
+	{
+		"code":"coloredstainbrushclean",
+		"ingredients":[
+			{
+				"type":"item",
+				"code":"waterportion",
+				"litres":1
+			},
+			{
+				"type":"item",
+				"code":"stainbrush-*-wet",
+				"quantity":1
+			}
+		],
+		"output":{
+			"type":"item",
+			"code":"stainbrush-none-dry",
+			"stackSize":1
+		}
+	}
+]
