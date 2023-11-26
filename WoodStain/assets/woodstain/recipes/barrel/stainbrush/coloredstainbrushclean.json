@@ -10,12 +10,26 @@
 			{
 				"type":"item",
 				"code":"stainbrush-*-wet",
+				"name": "color",
+				"allowedVariants":[
+					"blue", 
+                	"red", 
+                	"yellow",
+                	"purple",
+					"pink",
+                	"green",
+                	"orange",
+					"brown",
+                	"gray",
+					"black",
+                	"white"
+				],
 				"quantity":1
 			}
 		],
 		"output":{
 			"type":"item",
-			"code":"stainbrush-none-dry",
+			"code":"stainbrush-none-wet",
 			"stackSize":1
 		}
 	}

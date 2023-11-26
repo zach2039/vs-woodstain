@@ -70,7 +70,6 @@
                 "yellow",
                 "purple",
 				"pink",
-                "woad",
                 "green",
                 "orange",
 				"brown",
@@ -92,7 +91,15 @@
 		"base":"item/tool/stainbrush"
 	},
 	"texturesByType":{
-		"*-none-*":{
+		"*-none-wet":{
+			"brush":{
+				"base":"game:block/cloth/linen/normal1"
+			},
+			"handle":{
+				"base":"game:item/tool/material/wood"
+			}
+		},
+		"*-none-dry":{
 			"brush":{
 				"base":"game:block/cloth/linen/normal1"
 			},

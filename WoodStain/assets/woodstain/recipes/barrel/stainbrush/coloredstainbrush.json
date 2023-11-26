@@ -14,7 +14,6 @@
                 	"yellow",
                 	"purple",
 					"pink",
-                	"woad",
                 	"green",
                 	"orange",
 					"brown",
@@ -25,13 +24,44 @@
 			},
 			{
 				"type":"item",
-				"code":"stainbrush-none-dry",
+				"code":"stainbrush-none-*",
+				"name": "state",
+				"allowedVariants":[
+					"wet",
+					"dry"
+				],
 				"quantity":1
 			}
 		],
 		"output":{
 			"type":"item",
 			"code":"stainbrush-{color}-wet",
+			"stackSize":1
+		}
+	},
+	{
+		"code":"coloredstainbrushwoad",
+		"ingredients":[
+			{
+				"type":"item",
+				"code":"game:dye-woad",
+				"litres":1,
+				"consumelitres":1
+			},
+			{
+				"type":"item",
+				"code":"stainbrush-none-*",
+				"name": "state",
+				"allowedVariants":[
+					"wet",
+					"dry"
+				],
+				"quantity":1
+			}
+		],
+		"output":{
+			"type":"item",
+			"code":"stainbrush-blue-wet",
 			"stackSize":1
 		}
 	}

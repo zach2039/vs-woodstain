@@ -33,7 +33,7 @@ namespace WoodStain.Items
 					if (itemslot.Itemstack != null && !itemslot.Itemstack.Attributes.HasAttribute("durability"))
 					{
 						itemstack = itemslot.Itemstack;
-						itemstack.Attributes.SetInt("durability", 0);
+						itemstack.Attributes.SetInt("durability", itemstack.Collectible.GetMaxDurability(itemstack));
 					}
 					world.PlaySoundAt(new AssetLocation("sounds/effect/squish2"), player, null, true, 32f, 1f);
 				}
@@ -96,6 +96,13 @@ namespace WoodStain.Items
 			string color = this.Variant["color"];
 			if (color == null)
 			{
+				return false;
+			}
+
+			string state = this.Variant["state"];
+			if (state == null || state.Contains("dry"))
+			{
+				// Dont allow use of dry brushes to stain
 				return false;
 			}
 
