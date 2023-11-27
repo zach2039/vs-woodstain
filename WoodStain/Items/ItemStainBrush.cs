@@ -43,6 +43,7 @@ namespace WoodStain.Items
 					world.PlaySoundAt(new AssetLocation("sounds/effect/squish2"), byEntity.SidedPos.X, byEntity.SidedPos.Y, byEntity.SidedPos.Z, null, 1f, 16f, 1f);
 				}
 			}
+			itemslot.MarkDirty();
         }
 
         public override void OnHeldInteractStart(ItemSlot slot, EntityAgent byEntity, BlockSelection blockSel, EntitySelection entitySel, bool firstEvent, ref EnumHandHandling handling)
