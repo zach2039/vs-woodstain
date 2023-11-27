@@ -214,7 +214,7 @@ namespace WoodStain.Items
 							return false;
 						}
 
-						string liquidcolor = isDye ? contentItemstack.Collectible.Variant["color"] : "brown";
+						string liquidcolor = isDye ? contentItemstack.Collectible.Variant["color"] : (isStrongTannin ? "brown" : null);
 						if (liquidcolor == null)
 						{
 							return false;
