@@ -119,7 +119,17 @@ namespace WoodStain.Items
 				return false;
 			}
 
-            AssetLocation newBlockCode = new AssetLocation("woodstain", block.Code.Path.Replace("planks", "stainedplanks-" + color));
+            AssetLocation newBlockCode;
+
+			// Try to find valid block codes for stained variants
+			newBlockCode = new AssetLocation("woodstain", block.Code.Path.Replace("planks", "stainedplanks-" + color));
+
+			if (newBlockCode == null)
+				newBlockCode = new AssetLocation("woodstain", block.Code.Path.Replace("plankslab", "stainedplankslab-" + color));
+
+			if (newBlockCode == null)
+				newBlockCode = new AssetLocation("woodstain", block.Code.Path.Replace("plankstairs", "stainedplankstairs-" + color));
+
 			if (newBlockCode != null)
 			{
 				Block newBlock = this.api.World.GetBlock(newBlockCode);
