@@ -1,6 +1,6 @@
 [
 	{
-		"code":"coloredstainbrushclean",
+		"code":"coloredstainbrushcleanwet",
 		"ingredients":[
 			{
 				"type":"item",
@@ -13,6 +13,42 @@
 				"code":"stainbrush-*-wet",
 				"name": "color",
 				"allowedVariants":[
+					"blue", 
+                	"red", 
+                	"yellow",
+                	"purple",
+					"pink",
+                	"green",
+                	"orange",
+					"brown",
+                	"gray",
+					"black",
+                	"white"
+				],
+				"quantity":1
+			}
+		],
+		"output":{
+			"type":"item",
+			"code":"stainbrush-none-wet",
+			"stackSize":1
+		}
+	},
+	{
+		"code":"coloredstainbrushcleandry",
+		"ingredients":[
+			{
+				"type":"item",
+				"code":"game:waterportion",
+				"litres":1,
+				"consumelitres":1
+			},
+			{
+				"type":"item",
+				"code":"stainbrush-*-dry",
+				"name": "color",
+				"allowedVariants":[
+					"none", 
 					"blue", 
                 	"red", 
                 	"yellow",

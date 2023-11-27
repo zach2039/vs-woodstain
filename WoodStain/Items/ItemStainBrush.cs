@@ -2,6 +2,7 @@ using Vintagestory.API.Client;
 using Vintagestory.API.Common;
 using Vintagestory.API.Common.Entities;
 using Vintagestory.API.Util;
+using Vintagestory.GameContent;
 
 namespace WoodStain.Items
 {
@@ -55,6 +56,7 @@ namespace WoodStain.Items
 			{
 				return;
 			}
+			// Try to apply stain, then try to get stain from bucket
 			if (this.stain(byEntity, blockSel, -1))
 			{
 				EntityPlayer entityPlayer = byEntity as EntityPlayer;
@@ -67,6 +69,16 @@ namespace WoodStain.Items
 				if (player != null && this.api.Side.IsClient())
 				{
 					this.api.World.PlaySoundAt(new AssetLocation("sounds/effect/squish1"), player, null, true, 32f, 1f);
+				}
+			}
+			else if (this.tryGetStain(byEntity, blockSel, slot, -1))
+			{
+				EntityPlayer entityPlayer = byEntity as EntityPlayer;
+				IPlayer player = (entityPlayer != null) ? entityPlayer.Player : null;
+				
+				if (player != null && this.api.Side.IsClient())
+				{
+					this.api.World.PlaySoundAt(new AssetLocation("sounds/effect/water-fill"), player, null, true, 32f, 1f);
 				}
 			}
 			handling = EnumHandHandling.PreventDefault;
@@ -122,6 +134,127 @@ namespace WoodStain.Items
 					this.api.World.BlockAccessor.ExchangeBlock(newBlock.Id, blockSel.Position);
 					this.api.World.BlockAccessor.MarkBlockDirty(blockSel.Position, byPlayer);
 					return true;
+				}
+			}
+			
+			return false;
+		}
+
+		private bool tryGetStain(EntityAgent byEntity, BlockSelection blockSel, ItemSlot itemslot, int dir)
+		{
+			EntityPlayer entityPlayer = byEntity as EntityPlayer;
+			IPlayer byPlayer = (entityPlayer != null) ? entityPlayer.Player : null;
+			if (byPlayer == null)
+			{
+				return false;
+			}
+			if (!byEntity.World.Claims.TryAccess(byPlayer, blockSel.Position, EnumBlockAccessFlags.BuildOrBreak))
+			{
+				this.api.World.BlockAccessor.MarkBlockEntityDirty(blockSel.Position.AddCopy(blockSel.Face));
+				this.api.World.BlockAccessor.MarkBlockDirty(blockSel.Position.AddCopy(blockSel.Face), (IPlayer)null);
+				return false;
+			}
+
+			Block block = this.api.World.BlockAccessor.GetBlock(blockSel.Position);
+			if (block == null)
+			{
+				return false;
+			}
+
+			string color = this.Variant["color"];
+			if (color == null)
+			{
+				return false;
+			}
+
+			string state = this.Variant["state"];
+			if (state == null)
+			{
+				return false;
+			}
+
+			
+
+			// Try get liquid from target block, and perform different transformations on brush item depending on liquid
+			if (block is BlockLiquidContainerBase liquidContainerBase)
+			{
+				ItemStack contentItemstack = liquidContainerBase.GetContent(blockSel.Position);
+
+				if (contentItemstack != null)
+				{
+					WaterTightContainableProps props = liquidContainerBase.GetContentProps(blockSel.Position);
+					if (contentItemstack.Collectible.Code.Path.ToString().Contains("dye-")) // container of dye
+					{
+						// Only allow redip on brush if no color
+						if (color != "none")
+						{
+							return false;
+						}
+
+						string liquidcolor = contentItemstack.Collectible.Variant["color"];
+						if (liquidcolor == null)
+						{
+							return false;
+						}
+
+						// woad is an alternative to blue dye
+						if (liquidcolor == "woad")
+						{
+							liquidcolor = "blue";
+						}
+
+						if (liquidContainerBase.GetCurrentLitres(blockSel.Position) >= 1f)
+						{
+							if (liquidContainerBase.TryTakeContent(blockSel.Position, (int)(1 * props.ItemsPerLitre)) != null)
+							{
+								Item newItem = this.api.World.GetItem(base.CodeWithVariants(new string[]
+								{
+									"color",
+									"state"
+								}, new string[]
+								{
+									liquidcolor,
+									"wet"
+								}));
+								itemslot.Itemstack = new ItemStack(newItem, 1);
+								if (byPlayer != null)
+								{
+									if (itemslot.Itemstack != null && !itemslot.Itemstack.Attributes.HasAttribute("durability"))
+									{
+										itemslot.Itemstack.Attributes.SetInt("durability", itemslot.Itemstack.Collectible.GetMaxDurability(itemslot.Itemstack));
+									}
+									return true;
+								}
+							}
+						}
+					}
+					else if (contentItemstack.Collectible.Code.Path.ToString() == "waterportion") // container of water
+					{
+						if (liquidContainerBase.GetCurrentLitres(blockSel.Position) >= 1f)
+						{
+							if (liquidContainerBase.TryTakeContent(blockSel.Position, (int)(1 * props.ItemsPerLitre)) != null)
+							{
+								Item newItem = this.api.World.GetItem(base.CodeWithVariants(new string[]
+								{
+									"color",
+									"state"
+								}, new string[]
+								{
+									"none",
+									"wet"
+								}));
+								itemslot.Itemstack = new ItemStack(newItem, 1);
+								if (byPlayer != null)
+								{
+									if (itemslot.Itemstack != null && !itemslot.Itemstack.Attributes.HasAttribute("durability"))
+									{
+										itemslot.Itemstack.Attributes.SetInt("durability", itemslot.Itemstack.Collectible.GetMaxDurability(itemslot.Itemstack));
+									}
+									return true;
+								}
+							}
+						}
+					}
 				}
 			}
 			

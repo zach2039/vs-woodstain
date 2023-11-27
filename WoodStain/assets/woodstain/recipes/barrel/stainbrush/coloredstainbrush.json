@@ -1,6 +1,6 @@
 [
 	{
-		"code":"coloredstainbrush",
+		"code":"coloredstainbrushwet",
 		"ingredients":[
 			{
 				"type":"item",
@@ -24,12 +24,7 @@
 			},
 			{
 				"type":"item",
-				"code":"stainbrush-none-*",
-				"name": "state",
-				"allowedVariants":[
-					"wet",
-					"dry"
-				],
+				"code":"stainbrush-none-wet",
 				"quantity":1
 			}
 		],
@@ -40,7 +35,42 @@
 		}
 	},
 	{
-		"code":"coloredstainbrushwoad",
+		"code":"coloredstainbrushdry",
+		"ingredients":[
+			{
+				"type":"item",
+				"code":"game:dye-*",
+				"name":"color",
+				"allowedVariants":[
+					"blue", 
+                	"red", 
+                	"yellow",
+                	"purple",
+					"pink",
+                	"green",
+                	"orange",
+					"brown",
+                	"gray",
+					"black",
+                	"white"
+				],
+				"litres":1,
+				"consumelitres":1
+			},
+			{
+				"type":"item",
+				"code":"stainbrush-none-dry",
+				"quantity":1
+			}
+		],
+		"output":{
+			"type":"item",
+			"code":"stainbrush-{color}-wet",
+			"stackSize":1
+		}
+	},
+	{
+		"code":"coloredstainbrushwoadwet",
 		"ingredients":[
 			{
 				"type":"item",
@@ -50,12 +80,28 @@
 			},
 			{
 				"type":"item",
-				"code":"stainbrush-none-*",
-				"name": "state",
-				"allowedVariants":[
-					"wet",
-					"dry"
-				],
+				"code":"stainbrush-none-wet",
+				"quantity":1
+			}
+		],
+		"output":{
+			"type":"item",
+			"code":"stainbrush-blue-wet",
+			"stackSize":1
+		}
+	},
+	{
+		"code":"coloredstainbrushwoaddry",
+		"ingredients":[
+			{
+				"type":"item",
+				"code":"game:dye-woad",
+				"litres":1,
+				"consumelitres":1
+			},
+			{
+				"type":"item",
+				"code":"stainbrush-none-dry",
 				"quantity":1
 			}
 		],
