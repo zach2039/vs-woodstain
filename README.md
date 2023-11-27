@@ -4,7 +4,12 @@ Wood Stain
 Overview
 --------
 
-A Vintage Story mod that adds the ability to stain wood and associated tools, for creating colorful blocks.
+Adds the ability to stain wood; create colorful wooden plank variants from any wood type.
+
+Blocks, slabs, and stairs are stainable using a brush coated in any dye color.
+
+Note that stained planks cannot currently be sawed back down into planks.
+
 
 Quick-start Guide
 --------
