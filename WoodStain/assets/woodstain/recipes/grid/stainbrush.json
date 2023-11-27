@@ -1,0 +1,23 @@
+[
+	{
+		"ingredientPattern":"SSL",
+		"ingredients":{
+			"L":{
+				"type":"item",
+				"code":"game:linen-normal-down"
+			},
+			"S":{
+				"type":"item",
+				"code":"game:stick"
+			}
+		},
+		"width":3,
+		"height":1,
+        "shapeless":false,
+		"name":"stain brush",
+		"output":{
+			"type":"item",
+			"code":"stainbrush"
+		}
+	}
+]

@@ -1,4 +1,7 @@
 {
+    "craftinginfo-stainingwood-title": "Game Mechanic: Staining wood",
+    "craftinginfo-stainingwood-text": "<strong>Staining wood</strong><br><i>Stain wood in the world to get the perfect color for your builds!</i><br><br>To begin staining wood, you must craft a <a href=\"handbook://item-stainbrush\">stain brush</a> and create some <a href=\"handbooksearch://dye\">dye</a>. With a uncolored wet or dry stain brush, Right mouse a bucket of dye or place the uncolored brush into a barrel of dye. After the brush has been dyed, Right mouse wooden planks, stairs, or slabs to stain them. To clean a brush, Right mouse a bucket of clean water or place the used brush into a barrel of clean water. Stain brushes must be clean before dye for staining can be applied again.",
+
     "item-stainbrush-blue-wet": "Stain brush (blue, wet)",
     "item-stainbrush-red-wet": "Stain brush (red, wet)",
     "item-stainbrush-yellow-wet": "Stain brush (yellow, wet)",
