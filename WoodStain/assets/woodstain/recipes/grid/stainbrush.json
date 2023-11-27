@@ -3,7 +3,7 @@
 		"ingredientPattern":"SSL",
 		"ingredients":{
 			"L":{
-				"type":"item",
+				"type":"block",
 				"code":"game:linen-normal-down"
 			},
 			"S":{
@@ -17,7 +17,7 @@
 		"name":"stain brush",
 		"output":{
 			"type":"item",
-			"code":"stainbrush"
+			"code":"stainbrush-none-dry"
 		}
 	}
 ]
