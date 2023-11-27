@@ -6,8 +6,6 @@
 				"type":"item",
 				"code":"game:dye-*",
 				"name":"color",
-				"litres":1,
-				"consumelitres":1,
 				"allowedVariants":[
 					"blue", 
                 	"red", 
@@ -20,7 +18,9 @@
                 	"gray",
 					"black",
                 	"white"
-				]
+				],
+				"litres":1,
+				"consumelitres":1
 			},
 			{
 				"type":"item",

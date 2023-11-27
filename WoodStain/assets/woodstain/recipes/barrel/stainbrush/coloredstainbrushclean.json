@@ -4,8 +4,9 @@
 		"ingredients":[
 			{
 				"type":"item",
-				"code":"waterportion",
-				"litres":1
+				"code":"game:waterportion",
+				"litres":1,
+				"consumelitres":1
 			},
 			{
 				"type":"item",
