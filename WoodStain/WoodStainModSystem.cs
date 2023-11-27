@@ -51,7 +51,7 @@ namespace WoodStain
             // Send connecting players config settings
             this.serverChannel.SendPacket(
                 new SyncConfigClientPacket {
-                    TongsUsageConsumesDurability = WoodStainConfig.Loaded.TongsUsageConsumesDurability
+                    DummySettingBool = WoodStainConfig.Loaded.DummySettingBool
                 }, player);
         }
 
@@ -72,7 +72,7 @@ namespace WoodStain
                 .RegisterMessageType<SyncConfigClientPacket>()
                 .SetMessageHandler<SyncConfigClientPacket>(p => {
                     this.Mod.Logger.Event("Received config settings from server");
-                    WoodStainConfig.Loaded.TongsUsageConsumesDurability = p.TongsUsageConsumesDurability;
+                    WoodStainConfig.Loaded.DummySettingBool = p.DummySettingBool;
                 });
         }
     }

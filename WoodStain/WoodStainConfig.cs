@@ -10,6 +10,6 @@ namespace WoodStain
     {
         public static WoodStainConfig Loaded { get; set; } = new WoodStainConfig();
 
-        public bool TongsUsageConsumesDurability { get; set; } = true;
+        public bool DummySettingBool { get; set; } = true;
     }
 }
