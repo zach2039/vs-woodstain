@@ -207,7 +207,20 @@
 				},
 				"transitionedStack":{
 					"type":"item",
-					"code":"stainbrush-none-dry"
+					"codeByType":{
+						"*-none-*":"stainbrush-none-dry",
+						"*-blue-*":"stainbrush-blue-dry",
+						"*-red-*":"stainbrush-red-dry",
+						"*-yellow-*":"stainbrush-yellow-dry",
+						"*-purple-*":"stainbrush-purple-dry",
+						"*-pink-*":"stainbrush-pink-dry",
+						"*-green-*":"stainbrush-green-dry",
+						"*-orange-*":"stainbrush-orange-dry",
+						"*-brown-*":"stainbrush-brown-dry",
+						"*-gray-*":"stainbrush-gray-dry",
+						"*-black-*":"stainbrush-black-dry",
+						"*-white-*":"stainbrush-white-dry"
+					}
 				},
 				"transitionRatio":1
 			}
