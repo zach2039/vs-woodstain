@@ -204,7 +204,9 @@ namespace WoodStain.Items
 				if (contentItemstack != null)
 				{
 					WaterTightContainableProps props = liquidContainerBase.GetContentProps(blockSel.Position);
-					if (contentItemstack.Collectible.Code.Path.ToString().Contains("dye-")) // container of dye
+					bool isStrongTannin = contentItemstack.Collectible.Code.Path.ToString().Contains("strongtanninportion");
+					bool isDye = contentItemstack.Collectible.Code.Path.ToString().Contains("dye-");
+					if (isDye || isStrongTannin) // container of dye or strongtannin
 					{
 						// Only allow redip on brush if no color
 						if (color != "none")
@@ -212,7 +214,7 @@ namespace WoodStain.Items
 							return false;
 						}
 
-						string liquidcolor = contentItemstack.Collectible.Variant["color"];
+						string liquidcolor = isDye ? contentItemstack.Collectible.Variant["color"] : "brown";
 						if (liquidcolor == null)
 						{
 							return false;
