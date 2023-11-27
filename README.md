@@ -4,7 +4,7 @@ Wood Stain
 Overview
 --------
 
-A Vintage Story mod that adds wood stain and similar materials, for creating colorful blocks.
+A Vintage Story mod that adds the ability to stain wood and associated tools, for creating colorful blocks.
 
 Quick-start Guide
 --------
@@ -22,6 +22,12 @@ Config Settings (`VintageStoryData/ModConfig/WoodStain.json`)
 --------
 
  - No settings yet.
+
+
+Compatibility
+--------
+
+ - [Wildcraft Trees](https://mods.vintagestory.at/wildcrafttrees)
 
 
 Notable mods that add similar
