@@ -108,7 +108,18 @@
 	"texturesByType":{
 		"*-aged-*":{
 			"sides":{
-				"base":"game:block/wood/planks/aged1", "blendedOverlays": [{ "base": "block/wood/stain/overlay-{stain}", "blendMode": "Overlay" }]
+				"base":"game:block/wood/planks/aged/generic1", "blendedOverlays": [{ "base": "block/wood/stain/overlay-{stain}", "blendMode": "Overlay" }], 
+                "alternates": [
+                    { "base": "game:block/wood/planks/aged/generic2", "blendedOverlays": [{ "base": "block/wood/stain/overlay-{stain}", "blendMode": "Overlay" }] },
+					{ "base": "game:block/wood/planks/aged/generic3", "blendedOverlays": [{ "base": "block/wood/stain/overlay-{stain}", "blendMode": "Overlay" }] },
+					{ "base": "game:block/wood/planks/aged/generic4", "blendedOverlays": [{ "base": "block/wood/stain/overlay-{stain}", "blendMode": "Overlay" }] },
+					{ "base": "game:block/wood/planks/aged/generic5", "blendedOverlays": [{ "base": "block/wood/stain/overlay-{stain}", "blendMode": "Overlay" }] },
+					{ "base": "game:block/wood/planks/aged/generic6", "blendedOverlays": [{ "base": "block/wood/stain/overlay-{stain}", "blendMode": "Overlay" }] },
+					{ "base": "game:block/wood/planks/aged/generic7", "blendedOverlays": [{ "base": "block/wood/stain/overlay-{stain}", "blendMode": "Overlay" }] },
+					{ "base": "game:block/wood/planks/aged/generic8", "blendedOverlays": [{ "base": "block/wood/stain/overlay-{stain}", "blendMode": "Overlay" }] },
+					{ "base": "game:block/wood/planks/aged/generic9", "blendedOverlays": [{ "base": "block/wood/stain/overlay-{stain}", "blendMode": "Overlay" }] },
+					{ "base": "game:block/wood/planks/aged/generic10", "blendedOverlays": [{ "base": "block/wood/stain/overlay-{stain}", "blendMode": "Overlay" }] }
+                ]
 			}
 		},
 		"*":{
