@@ -16,7 +16,7 @@
 		"op": "addmerge",
 		"path": "/texturesByType",
 		"value": {
-			"*-(cedar|spruce|douglasfir|tuja|redcedar|yew|kauri|ginkgo|sycamore|honeylocust|dalbergia|umnini|banyan|elm|beech|bearnut|willow|poplar|guajacum|eucalyptus|ghostgum|ohia|satinash|bluemahoe|sal|mahogany|saxaul|catalpa|jacaranda|empresstree|chlorociboria|petrified)":{
+			"@.*-(cedar|spruce|douglasfir|tuja|redcedar|yew|kauri|ginkgo|sycamore|honeylocust|dalbergia|umnini|banyan|elm|beech|bearnut|willow|poplar|guajacum|eucalyptus|ghostgum|ohia|satinash|bluemahoe|sal|mahogany|saxaul|catalpa|jacaranda|empresstree|chlorociboria|petrified)-.*":{
 				"sides":{
 					"base":"wildcrafttree:block/wood/planks/{wood}1", "blendedOverlays": [{ "base": "block/wood/stain/overlay-{stain}", "blendMode": "Overlay" }], 
 					"alternates": [
@@ -27,5 +27,17 @@
 				}
 			}
 		}
+	},
+	{
+		"op": "move",
+		"frompath": "/texturesByType/*",
+		"path": "/texturesByType/temp",
+		"file": "woodstain:blocktypes/wood/woodtyped/stainedplankstairs.json"
+	},
+	{
+		"op": "move",
+		"frompath": "/texturesByType/temp",
+		"path": "/texturesByType/*",
+		"file": "woodstain:blocktypes/wood/woodtyped/stainedplankstairs.json"
 	}
 ]

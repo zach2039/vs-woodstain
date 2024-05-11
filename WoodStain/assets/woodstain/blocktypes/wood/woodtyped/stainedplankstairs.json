@@ -67,7 +67,7 @@
 			"states":[
 				"aged"
 			],
-			"loadFromPropertiesCombine ": [ "game:block/wood" ]
+			"loadFromPropertiesCombine": [ "game:block/wood" ]
 		},
 		{
 			"loadFromProperties":"abstract/verticalorientation"
