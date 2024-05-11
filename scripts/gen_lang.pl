@@ -77,7 +77,7 @@ my %woodtypes = (
 	umnini => 'Umnini', 
 	banyan => 'Banyan', 
 	poplar => 'Poplar', 
-	gaujacum => 'Gaujacum', 
+	guajacum => 'Gaujacum', 
 	ghostgum => 'Ghost gum', 
 	ohia => 'Ohia', 
 	satinash => 'Satinash', 
@@ -110,11 +110,10 @@ printf "\n";
 
 foreach my $woodtype (keys %woodtypes) {
 	foreach my $color (@colors) {
-		my $type = $woodtypes{$woodtype};
 		my $en = $woodtypes{$woodtype};
-		printf "\t\"block-stainedplanks-${color}-${type}\": \"${en} stained planks (${color})\",\n";
-		printf "\t\"block-stainedplankslab-${color}-${type}-*\": \"${en} stained slab (${color})\",\n";
-		printf "\t\"block-stainedplankstairs-${color}-${type}-*\": \"${en} stained stairs (${color})\",\n";
+		printf "\t\"block-stainedplanks-${color}-${woodtype}*\": \"${en} stained planks (${color})\",\n";
+		printf "\t\"block-stainedplankslab-${color}-${woodtype}*\": \"${en} stained slab (${color})\",\n";
+		printf "\t\"block-stainedplankstairs-${color}-${woodtype}*\": \"${en} stained stairs (${color})\",\n";
 	}	
 	printf "\n";
 }
