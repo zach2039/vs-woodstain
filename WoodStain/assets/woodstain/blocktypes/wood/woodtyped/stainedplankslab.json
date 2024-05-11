@@ -38,7 +38,7 @@
 			"states":[
 				"aged"
 			],
-			"loadFromProperties":"block/wood"
+			"loadFromPropertiesCombine": [ "game:block/wood" ]
 		},
 		{
 			"code":"rot",

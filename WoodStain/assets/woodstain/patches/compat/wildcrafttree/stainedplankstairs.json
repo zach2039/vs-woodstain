@@ -1,0 +1,31 @@
+[
+	{
+		"dependsOn": [
+			{ "modid": "wildcrafttree" }
+		],
+		"file": "woodstain:blocktypes/wood/woodtyped/stainedplankstairs.json",
+		"op": "addmerge",
+		"path": "/variantgroups/1/loadFromPropertiesCombine/-",
+		"value": "wildcrafttree:block/wood"
+	},
+	{
+		"dependsOn": [
+			{ "modid": "wildcrafttree" }
+		],
+		"file": "woodstain:blocktypes/wood/woodtyped/stainedplankstairs.json",
+		"op": "addmerge",
+		"path": "/texturesByType",
+		"value": {
+			"*-(cedar|spruce|douglasfir|tuja|redcedar|yew|kauri|ginkgo|sycamore|honeylocust|dalbergia|umnini|banyan|elm|beech|bearnut|willow|poplar|guajacum|eucalyptus|ghostgum|ohia|satinash|bluemahoe|sal|mahogany|saxaul|catalpa|jacaranda|empresstree|chlorociboria|petrified)":{
+				"sides":{
+					"base":"wildcrafttree:block/wood/planks/{wood}1", "blendedOverlays": [{ "base": "block/wood/stain/overlay-{stain}", "blendMode": "Overlay" }], 
+					"alternates": [
+						{ "base": "wildcrafttree:block/wood/planks/{wood}2", "blendedOverlays": [{ "base": "block/wood/stain/overlay-{stain}", "blendMode": "Overlay" }] },
+						{ "base": "wildcrafttree:block/wood/planks/{wood}3", "blendedOverlays": [{ "base": "block/wood/stain/overlay-{stain}", "blendMode": "Overlay" }] },
+						{ "base": "wildcrafttree:block/wood/planks/{wood}4", "blendedOverlays": [{ "base": "block/wood/stain/overlay-{stain}", "blendMode": "Overlay" }] }
+					]
+				}
+			}
+		}
+	}
+]
