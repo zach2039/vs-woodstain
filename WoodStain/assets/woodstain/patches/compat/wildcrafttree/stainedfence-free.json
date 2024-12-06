@@ -1,0 +1,11 @@
+[
+	{
+		"dependsOn": [
+			{ "modid": "wildcrafttree" }
+		],
+		"file": "woodstain:blocktypes/wood/woodtyped/stainedfence-free.json",
+		"op": "addmerge",
+		"path": "/variantgroups/1/loadFromPropertiesCombine/-",
+		"value": "wildcrafttree:block/wood"
+	}
+]

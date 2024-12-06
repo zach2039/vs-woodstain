@@ -6,7 +6,7 @@
         "Zach2039"
     ],
     "description": "A Vintage Story mod that adds wood stain and similar materials, for creating colorful blocks.",
-    "version": "1.1.0",
+    "version": "1.2.0",
     "dependencies": {
         "game": "*"
     }

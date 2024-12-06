@@ -16,13 +16,43 @@
 		"op": "addmerge",
 		"path": "/texturesByType",
 		"value": {
-			"@.*-(cedar|spruce|douglasfir|tuja|redcedar|yew|kauri|ginkgo|sycamore|honeylocust|dalbergia|umnini|banyan|elm|beech|bearnut|willow|poplar|guajacum|eucalyptus|ghostgum|ohia|satinash|bluemahoe|sal|mahogany|saxaul|catalpa|jacaranda|empresstree|chlorociboria|petrified)-.*":{
-				"sides":{
-					"base":"wildcrafttree:block/wood/planks/{wood}1", "blendedOverlays": [{ "base": "block/wood/stain/overlay-{stain}", "blendMode": "Overlay" }], 
+			"@.*-(cedar|fir|spruce|douglasfir|tuja|redcedar|yew|kauri|ginkgo|sycamore|honeylocust|dalbergia|umnini|banyan|elm|beech|bearnut|willow|poplar|tamanu|spurgetree|azobe|guajacum|eucalyptus|ghostgum|ohia|satinash|leadwood|bluemahoe|linden|sal|horsechestnut|tigerwood|mahogany|sapele|saxaul|ash|catalpa|jacaranda|mangrove|empresstree|charred|chlorociboria|petrified)-.*": {
+				"sides": {
+					"base": "wildcrafttree:block/wood/planks/{wood}1",
+					"blendedOverlays": [
+						{
+							"base": "block/wood/stain/overlay-{stain}",
+							"blendMode": "Overlay"
+						}
+					],
 					"alternates": [
-						{ "base": "wildcrafttree:block/wood/planks/{wood}2", "blendedOverlays": [{ "base": "block/wood/stain/overlay-{stain}", "blendMode": "Overlay" }] },
-						{ "base": "wildcrafttree:block/wood/planks/{wood}3", "blendedOverlays": [{ "base": "block/wood/stain/overlay-{stain}", "blendMode": "Overlay" }] },
-						{ "base": "wildcrafttree:block/wood/planks/{wood}4", "blendedOverlays": [{ "base": "block/wood/stain/overlay-{stain}", "blendMode": "Overlay" }] }
+						{
+							"base": "wildcrafttree:block/wood/planks/{wood}2",
+							"blendedOverlays": [
+								{
+									"base": "block/wood/stain/overlay-{stain}",
+									"blendMode": "Overlay"
+								}
+							]
+						},
+						{
+							"base": "wildcrafttree:block/wood/planks/{wood}3",
+							"blendedOverlays": [
+								{
+									"base": "block/wood/stain/overlay-{stain}",
+									"blendMode": "Overlay"
+								}
+							]
+						},
+						{
+							"base": "wildcrafttree:block/wood/planks/{wood}4",
+							"blendedOverlays": [
+								{
+									"base": "block/wood/stain/overlay-{stain}",
+									"blendMode": "Overlay"
+								}
+							]
+						}
 					]
 				}
 			}

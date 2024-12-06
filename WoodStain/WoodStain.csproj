@@ -37,6 +37,14 @@
     <Content Include="assets\**">
         <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <None Remove="assets\woodstain\blocktypes\wood\woodtyped\stainedfence-free.json" />
+    <None Remove="assets\woodstain\blocktypes\wood\woodtyped\stainedfence-snow.json" />
+    <None Remove="assets\woodstain\blocktypes\wood\woodtyped\stainedfencegate.json" />
+    <None Remove="assets\woodstain\patches\compat\wildcrafttree\stainedfence-free.json" />
+    <None Remove="assets\woodstain\patches\compat\wildcrafttree\stainedfence-snow.json" />
+    <None Remove="assets\woodstain\patches\compat\wildcrafttree\stainedfencegate.json" />
+    <None Remove="assets\woodstain\sounds\block\door.ogg" />
+    <None Remove="assets\woodstain\sounds\block\hewnfancegate.ogg" />
     <Content Include="modinfo.json">
         <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>

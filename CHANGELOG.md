@@ -1,3 +1,8 @@
+### v1.20.x-1.2.0
+
+- Target VS v1.20.0-rc1
+- Fix compat wwith WildcraftTrees
+
 ### v1.19.x-1.1.0
 
  - Target VS v1.19.7

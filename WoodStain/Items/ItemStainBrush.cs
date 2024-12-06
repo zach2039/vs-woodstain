@@ -134,7 +134,15 @@ namespace WoodStain.Items
 			{
 				newBlockCode = new AssetLocation("woodstain", block.Code.Path.Replace("planks", "stainedplanks-" + color));
 			}
-			else
+            else if (block.Code.Path.Contains("woodenfencegate"))
+            {
+                newBlockCode = new AssetLocation("woodstain", block.Code.Path.Replace("woodenfencegate", "stainedwoodenfencegate-" + color));
+            }
+            else if (block.Code.Path.Contains("woodenfence"))
+            {
+                newBlockCode = new AssetLocation("woodstain", block.Code.Path.Replace("woodenfence", "stainedwoodenfence-" + color));
+            }
+            else
 			{
 				// No valid replacement for found block
 				return false;
