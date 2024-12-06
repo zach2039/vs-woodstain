@@ -2,6 +2,8 @@
 
 - Target VS v1.20.0-rc1
 - Fix compat wwith WildcraftTrees
+- Add stained fences
+- Add stained fence gates
 
 ### v1.19.x-1.1.0
 
