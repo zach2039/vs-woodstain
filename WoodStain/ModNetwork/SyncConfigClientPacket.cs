@@ -1,6 +1,6 @@
 using ProtoBuf;
 
-namespace WoodStain.Network
+namespace WoodStain.ModNetwork
 {
     [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
     public class SyncConfigClientPacket

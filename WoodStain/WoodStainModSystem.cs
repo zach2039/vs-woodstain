@@ -2,8 +2,8 @@
 using Vintagestory.API.Common;
 using Vintagestory.API.Config;
 using Vintagestory.API.Server;
-using WoodStain.Items;
-using WoodStain.Network;
+using WoodStain.ModItem;
+using WoodStain.ModNetwork;
 
 namespace WoodStain
 {

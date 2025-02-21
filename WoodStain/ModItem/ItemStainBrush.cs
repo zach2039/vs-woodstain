@@ -4,7 +4,7 @@ using Vintagestory.API.Common.Entities;
 using Vintagestory.API.Util;
 using Vintagestory.GameContent;
 
-namespace WoodStain.Items
+namespace WoodStain.ModItem
 {
     public class ItemStainBrush : Item
     {
@@ -141,6 +141,10 @@ namespace WoodStain.Items
             else if (block.Code.Path.Contains("woodenfence"))
             {
                 newBlockCode = new AssetLocation("woodstain", block.Code.Path.Replace("woodenfence", "stainedwoodenfence-" + color));
+            }
+            else if (block.Code.Path.Contains("debarkedlog"))
+            {
+                newBlockCode = new AssetLocation("woodstain", block.Code.Path.Replace("debarkedlog", "staineddebarkedlog-" + color));
             }
             else
 			{

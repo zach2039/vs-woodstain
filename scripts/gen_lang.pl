@@ -37,6 +37,8 @@ my $content = qq(
 my %woodtypes = (
 	acacia => 'Acacia',
 	aged => 'Aged',
+	veryagedrotten => 'Rotten aged',
+	veryaged => 'Very aged',
 	agedebony => 'Aged ebony',
 	alder => 'Alder',
 	ash => 'Ash',
@@ -120,7 +122,7 @@ printf "$content";
 
 printf "\n";
 
-foreach my $woodtype (keys %woodtypes) {
+foreach my $woodtype (sort (keys %woodtypes)) {
 	foreach my $color (@colors) {
 		my $en = $woodtypes{$woodtype};
 		printf "\t\"block-stainedplanks-${color}-${woodtype}*\": \"${en} stained planks (${color})\",\n";
@@ -128,6 +130,7 @@ foreach my $woodtype (keys %woodtypes) {
 		printf "\t\"block-stainedplankstairs-${color}-${woodtype}*\": \"${en} stained stairs (${color})\",\n";
 		printf "\t\"block-stainedwoodenfence-${color}-${woodtype}*\": \"${en} stained fence (${color})\",\n";
 		printf "\t\"block-stainedwoodenfencegate-${color}-${woodtype}*\": \"${en} stained fence gate (${color})\",\n";
+		printf "\t\"block-staineddebarkedlog-${color}-${woodtype}*\": \"${en} stained debarked log (${color})\",\n";
 	}	
 	printf "\n";
 }

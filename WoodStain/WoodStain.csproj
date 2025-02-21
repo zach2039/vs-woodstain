@@ -40,6 +40,7 @@
     <None Remove="assets\woodstain\blocktypes\wood\woodtyped\stainedfence-free.json" />
     <None Remove="assets\woodstain\blocktypes\wood\woodtyped\stainedfence-snow.json" />
     <None Remove="assets\woodstain\blocktypes\wood\woodtyped\stainedfencegate.json" />
+    <None Remove="assets\woodstain\blocktypes\wood\woodtyped\stainedlog-debarked.json" />
     <None Remove="assets\woodstain\patches\compat\wildcrafttree\stainedfence-free.json" />
     <None Remove="assets\woodstain\patches\compat\wildcrafttree\stainedfence-snow.json" />
     <None Remove="assets\woodstain\patches\compat\wildcrafttree\stainedfencegate.json" />
