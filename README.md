@@ -6,7 +6,7 @@ Overview
 
 Adds the ability to stain wood; create colorful wooden plank variants from any wood type.
 
-Blocks, slabs, stairs, fences \(not rough-hewn\), and fence gates are stainable using a brush coated in any dye color.
+Blocks, slabs, stairs, debarked logs, fences \(not rough-hewn\), and fence gates are stainable using a brush coated in any dye color.
 
 Note that stained planks cannot currently be sawed back down into planks.
 
@@ -32,7 +32,7 @@ Config Settings (`VintageStoryData/ModConfig/WoodStain.json`)
 Compatibility
 --------
 
- - [Wildcraft Trees](https://mods.vintagestory.at/wildcrafttrees)
+ - [Wildcraft Trees](https://mods.vintagestory.at/wildcrafttrees) (Missing debarked logs variants, currently)
 
 
 Notable mods that add similar
