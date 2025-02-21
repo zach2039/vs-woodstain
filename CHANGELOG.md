@@ -1,3 +1,8 @@
+### v1.20.x-1.3.0
+
+- Add stained debarked logs
+- Add polish translation by Pawelot00 (incomplete)
+
 ### v1.20.x-1.2.0
 
 - Target VS v1.20.0-rc1
