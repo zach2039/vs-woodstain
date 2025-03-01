@@ -1,0 +1,178 @@
+[
+	{
+		"dependsOn": [
+			{ "modid": "wildcrafttree" }
+		],
+		"file": "woodstain:blocktypes/wood/woodtyped/stainedlog-debarked.json",
+		"op": "addmerge",
+		"path": "/variantgroups/1/loadFromPropertiesCombine/-",
+		"value": "wildcrafttree:block/wood"
+	},
+	{
+		"dependsOn": [
+			{ "modid": "wildcrafttree" }
+		],
+		"file": "woodstain:blocktypes/wood/woodtyped/stainedlog-debarked.json",
+		"op": "addmerge",
+		"path": "/texturesByType/@.*-(cedar|fir|spruce|douglasfir|tuja|redcedar|yew|kauri|ginkgo|sycamore|honeylocust|dalbergia|umnini|banyan|elm|beech|bearnut|willow|poplar|tamanu|spurgetree|azobe|guajacum|eucalyptus|ghostgum|ohia|satinash|leadwood|bluemahoe|linden|sal|horsechestnut|tigerwood|mahogany|sapele|saxaul|ash|catalpa|jacaranda|mangrove|empresstree|charred|chlorociboria|petrified)-ud",
+		"value": {
+			"all": {
+				"base": "game:block/wood/debarked/{wood}",
+				"rotation": 90,
+				"blendedOverlays": [
+					{
+						"base": "block/wood/stain/overlay-{stain}",
+						"blendMode": "Overlay"
+					}
+				]
+			},
+			"up": {
+				"base": "wildcrafttree:block/wood/treetrunk/{wood}",
+				"blendedOverlays": [
+					{
+						"base": "block/wood/stain/overlay-{stain}",
+						"blendMode": "Overlay"
+					}
+				]
+			},
+			"down": {
+				"base": "wildcrafttree:block/wood/treetrunk/{wood}",
+				"blendedOverlays": [
+					{
+						"base": "block/wood/stain/overlay-{stain}",
+						"blendMode": "Overlay"
+					}
+				]
+			}
+		}
+	},
+	{
+		"dependsOn": [
+			{ "modid": "wildcrafttree" }
+		],
+		"file": "woodstain:blocktypes/wood/woodtyped/stainedlog-debarked.json",
+		"op": "addmerge",
+		"path": "/texturesByType/@.*-(cedar|fir|spruce|douglasfir|tuja|redcedar|yew|kauri|ginkgo|sycamore|honeylocust|dalbergia|umnini|banyan|elm|beech|bearnut|willow|poplar|tamanu|spurgetree|azobe|guajacum|eucalyptus|ghostgum|ohia|satinash|leadwood|bluemahoe|linden|sal|horsechestnut|tigerwood|mahogany|sapele|saxaul|ash|catalpa|jacaranda|mangrove|empresstree|charred|chlorociboria|petrified)-ns",
+		"value": {
+			"all": {
+				"base": "game:block/wood/debarked/{wood}",
+				"rotation": 90,
+				"blendedOverlays": [
+					{
+						"base": "block/wood/stain/overlay-{stain}",
+						"blendMode": "Overlay"
+					}
+				]
+			},
+			"east": {
+				"base": "game:block/wood/debarked/{wood}",
+				"blendedOverlays": [
+					{
+						"base": "block/wood/stain/overlay-{stain}",
+						"blendMode": "Overlay"
+					}
+				]
+			},
+			"west": {
+				"base": "game:block/wood/debarked/{wood}",
+				"blendedOverlays": [
+					{
+						"base": "block/wood/stain/overlay-{stain}",
+						"blendMode": "Overlay"
+					}
+				]
+			},
+			"north": {
+				"base": "wildcrafttree:block/wood/treetrunk/{wood}",
+				"blendedOverlays": [
+					{
+						"base": "block/wood/stain/overlay-{stain}",
+						"blendMode": "Overlay"
+					}
+				]
+			},
+			"south": {
+				"base": "wildcrafttree:block/wood/treetrunk/{wood}",
+				"blendedOverlays": [
+					{
+						"base": "block/wood/stain/overlay-{stain}",
+						"blendMode": "Overlay"
+					}
+				]
+			}
+		}
+	},
+	{
+		"dependsOn": [
+			{ "modid": "wildcrafttree" }
+		],
+		"file": "woodstain:blocktypes/wood/woodtyped/stainedlog-debarked.json",
+		"op": "addmerge",
+		"path": "/texturesByType/@.*-(cedar|fir|spruce|douglasfir|tuja|redcedar|yew|kauri|ginkgo|sycamore|honeylocust|dalbergia|umnini|banyan|elm|beech|bearnut|willow|poplar|tamanu|spurgetree|azobe|guajacum|eucalyptus|ghostgum|ohia|satinash|leadwood|bluemahoe|linden|sal|horsechestnut|tigerwood|mahogany|sapele|saxaul|ash|catalpa|jacaranda|mangrove|empresstree|charred|chlorociboria|petrified)-we",
+		"value": {
+			"all": {
+				"base": "game:block/wood/debarked/{wood}",
+				"blendedOverlays": [
+					{
+						"base": "block/wood/stain/overlay-{stain}",
+						"blendMode": "Overlay"
+					}
+				]
+			},
+			"west": {
+				"base": "wildcrafttree:block/wood/treetrunk/{wood}",
+				"blendedOverlays": [
+					{
+						"base": "block/wood/stain/overlay-{stain}",
+						"blendMode": "Overlay"
+					}
+				]
+			},
+			"east": {
+				"base": "wildcrafttree:block/wood/treetrunk/{wood}",
+				"blendedOverlays": [
+					{
+						"base": "block/wood/stain/overlay-{stain}",
+						"blendMode": "Overlay"
+					}
+				]
+			}
+		}
+	},
+	{
+		"op": "move",
+		"frompath": "/texturesByType/*-ud",
+		"path": "/texturesByType/temp-*-ud",
+		"file": "woodstain:blocktypes/wood/woodtyped/stainedlog-debarked.json"
+	},
+	{
+		"op": "move",
+		"frompath": "/texturesByType/temp-*-ud",
+		"path": "/texturesByType/*-ud",
+		"file": "woodstain:blocktypes/wood/woodtyped/stainedlog-debarked.json"
+	},
+	{
+		"op": "move",
+		"frompath": "/texturesByType/*-we",
+		"path": "/texturesByType/temp-*-we",
+		"file": "woodstain:blocktypes/wood/woodtyped/stainedlog-debarked.json"
+	},
+	{
+		"op": "move",
+		"frompath": "/texturesByType/temp-*-we",
+		"path": "/texturesByType/*-we",
+		"file": "woodstain:blocktypes/wood/woodtyped/stainedlog-debarked.json"
+	},
+	{
+		"op": "move",
+		"frompath": "/texturesByType/*-ns",
+		"path": "/texturesByType/temp-*-ns",
+		"file": "woodstain:blocktypes/wood/woodtyped/stainedlog-debarked.json"
+	},
+	{
+		"op": "move",
+		"frompath": "/texturesByType/temp-*-ns",
+		"path": "/texturesByType/*-ns",
+		"file": "woodstain:blocktypes/wood/woodtyped/stainedlog-debarked.json"
+	}
+]

@@ -65,17 +65,17 @@
 			"code":"color",
 			"states":[
 				"none",
-				"blue", 
-                "red", 
-                "yellow",
-                "purple",
+				"blue",
+				"red",
+				"yellow",
+				"purple",
 				"pink",
-                "green",
-                "orange",
+				"green",
+				"orange",
 				"brown",
-                "gray",
+				"gray",
 				"black",
-                "white"
+				"white"
 			]
 		},
 		{
@@ -90,29 +90,29 @@
 	"shape":{
 		"base":"item/tool/stainbrush"
 	},
-	"texturesByType":{
-		"*-none-wet":{
-			"brush":{
-				"base":"game:block/cloth/linen/normal1"
+	"texturesByType": {
+		"*-none-wet": {
+			"brush": {
+				"base": "game:block/cloth/linen/normal1"
 			},
-			"handle":{
-				"base":"game:item/tool/material/wood"
+			"handle": {
+				"base": "game:item/tool/material/wood"
 			}
 		},
-		"*-none-dry":{
-			"brush":{
-				"base":"game:block/cloth/linen/normal1"
+		"*-none-dry": {
+			"brush": {
+				"base": "game:block/cloth/linen/normal1"
 			},
-			"handle":{
-				"base":"game:item/tool/material/wood"
+			"handle": {
+				"base": "game:item/tool/material/wood"
 			}
 		},
-		"*":{
-			"brush":{
-				"base":"game:block/cloth/linen/{color}"
+		"*": {
+			"brush": {
+				"base": "game:block/cloth/linen/{color}"
 			},
-			"handle":{
-				"base":"game:item/tool/material/wood"
+			"handle": {
+				"base": "game:item/tool/material/wood"
 			}
 		}
 	},
@@ -207,19 +207,19 @@
 				},
 				"transitionedStack":{
 					"type":"item",
-					"codeByType":{
-						"*-none-*":"stainbrush-none-dry",
-						"*-blue-*":"stainbrush-blue-dry",
-						"*-red-*":"stainbrush-red-dry",
-						"*-yellow-*":"stainbrush-yellow-dry",
-						"*-purple-*":"stainbrush-purple-dry",
-						"*-pink-*":"stainbrush-pink-dry",
-						"*-green-*":"stainbrush-green-dry",
-						"*-orange-*":"stainbrush-orange-dry",
-						"*-brown-*":"stainbrush-brown-dry",
-						"*-gray-*":"stainbrush-gray-dry",
-						"*-black-*":"stainbrush-black-dry",
-						"*-white-*":"stainbrush-white-dry"
+					"codeByType": {
+						"*-none-*": "stainbrush-none-dry",
+						"*-blue-*": "stainbrush-blue-dry",
+						"*-red-*": "stainbrush-red-dry",
+						"*-yellow-*": "stainbrush-yellow-dry",
+						"*-purple-*": "stainbrush-purple-dry",
+						"*-pink-*": "stainbrush-pink-dry",
+						"*-green-*": "stainbrush-green-dry",
+						"*-orange-*": "stainbrush-orange-dry",
+						"*-brown-*": "stainbrush-brown-dry",
+						"*-gray-*": "stainbrush-gray-dry",
+						"*-black-*": "stainbrush-black-dry",
+						"*-white-*": "stainbrush-white-dry"
 					}
 				},
 				"transitionRatio":1

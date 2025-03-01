@@ -1,3 +1,7 @@
+### v1.20.x-1.3.1
+
+- Add stained debarked logs for wildcrafttree
+
 ### v1.20.x-1.3.0
 
 - Add stained debarked logs

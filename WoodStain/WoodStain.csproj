@@ -44,6 +44,7 @@
     <None Remove="assets\woodstain\patches\compat\wildcrafttree\stainedfence-free.json" />
     <None Remove="assets\woodstain\patches\compat\wildcrafttree\stainedfence-snow.json" />
     <None Remove="assets\woodstain\patches\compat\wildcrafttree\stainedfencegate.json" />
+    <None Remove="assets\woodstain\patches\compat\wildcrafttree\stainedlog-debarked.json" />
     <None Remove="assets\woodstain\sounds\block\door.ogg" />
     <None Remove="assets\woodstain\sounds\block\hewnfancegate.ogg" />
     <Content Include="modinfo.json">
