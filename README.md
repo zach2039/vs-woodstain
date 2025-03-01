@@ -32,7 +32,7 @@ Config Settings (`VintageStoryData/ModConfig/WoodStain.json`)
 Compatibility
 --------
 
- - [Wildcraft Trees](https://mods.vintagestory.at/wildcrafttrees) (Missing debarked logs variants, currently)
+ - [Wildcraft Trees](https://mods.vintagestory.at/wildcrafttrees)
 
 
 Notable mods that add similar
